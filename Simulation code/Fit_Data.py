@@ -9,7 +9,7 @@ import multiprocessing as mp
 cpus = 4 # For multiprocessing, usually a good idea to use multiple CPUs as long as you have enough RAM
 mp.set_start_method("spawn")
 folder = input("From which folder do you want to extract data? ")
-path  = "/Users/Arian van Tilburg/Documents/KI/Scriptie/Code/" + folder + "/" #CHANGE THIS to the folder where the datasets are to be found
+path  = "/Users/Arian van Tilburg/Documents/KI/Scriptie/Code/" + folder + "/" #this is fixed to the folder where the datasets are to be found
 n_comp = int(input("How many principal components do you want to use? "))
 use_pca = input("Do you want to train a pca model? [yes/no] ")
 use_mcca = input("Do you want to train a mcca model? [yes/no] ")
@@ -74,10 +74,12 @@ FN_MCCA = len(true_estimates_mcca['event']) - TP_MCCA
 FP_PCA = len(selected_pca['event']) - TP_PCA
 FP_MCCA = len(selected_mcca['event']) - TP_MCCA
 
+print("CHECK")
+
 TPR_PCA = TP_PCA/(TP_PCA + FN_PCA)
 TPR_MCCA = TP_MCCA/(TP_MCCA + FN_MCCA)
-PPV_PCA = TPR_PCA/(TPR_PCA + FP_PCA)
-PPV_MCCA = TPR_MCCA/(TPR_MCCA + FP_MCCA)
+PPV_PCA = TP_PCA/(TP_PCA + FP_PCA)
+PPV_MCCA = TP_MCCA/(TP_MCCA + FP_MCCA)
 
 #print TPR and PPV
 print("\n")
