@@ -74,8 +74,6 @@ FN_MCCA = len(true_estimates_mcca['event']) - TP_MCCA
 FP_PCA = len(selected_pca['event']) - TP_PCA
 FP_MCCA = len(selected_mcca['event']) - TP_MCCA
 
-print("CHECK")
-
 TPR_PCA = TP_PCA/(TP_PCA + FN_PCA)
 TPR_MCCA = TP_MCCA/(TP_MCCA + FN_MCCA)
 PPV_PCA = TP_PCA/(TP_PCA + FP_PCA)
