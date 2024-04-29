@@ -13,7 +13,7 @@ This script was used to visualize the raw data. It reads in all .fif and .npy of
 
 Fit_Data.py
 
-This script was used to create HMP models for a dataset. It reads in all .fif and .npy files in a given folder and outputs a plot of the PCA model, the M-CCA model and the true model. Note that the folder where this script is called on contains at least one .fif file and one .npy file that starts with true in order to be able to train a true model.
+This script was used to create HMP models for a dataset. It reads in all .fif and .npy files in a given folder and outputs a plot of the PCA model, the M-CCA model and the true model. Note that the folder where this script is called on contains at least one .fif file and one .npy file that starts with "true" in order to be able to train a true model.
 
 This script also analyses the models by giving the TPR and PPV of the models. These can be saved the same way Generate_Data.py stores the data. Make sure that these are then put in a folder the same way for Plot_Results.py to work.
 
